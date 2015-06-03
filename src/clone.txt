@@ -1,0 +1,22 @@
+//--------------------------------------------------------------------
+//
+//  Laboratory 5                                          clone.txt
+//
+//  Clone implementation that will make an identical but separate
+//  duplicate of an Object -- in this case a Stack ADT
+//
+//--------------------------------------------------------------------
+
+  public Object clone()                     // clone the Stack
+  {
+      try
+      {
+          return super.clone();
+      }
+      catch (CloneNotSupportedException e)
+      {
+          // This should never happen
+          throw new InternalError
+              ("\nThis class does not implement Cloneable");
+      }
+  }
